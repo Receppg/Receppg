@@ -104,3 +104,24 @@ class OyunDetayEkrani extends StatelessWidget {
     );
   }
 }
+class SkorEkrani extends StatelessWidget {
+    final int skor;
+
+    const SkorEkrani({super.key, required this.skor});
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            appBar: AppBar(
+                title: const Text('Skor'),
+            ),
+            body: Center(
+                child: Text('Skorunuz: $skor'),
+            ),
+        );
+    }
+}
+// main.dart
+return MaterialApp(
+    home: SkorEkrani(skor: 100),
+);
